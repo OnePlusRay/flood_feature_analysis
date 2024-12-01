@@ -1,9 +1,14 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib import rcParams
+
+# 设置字体以增强可读性
+plt.rcParams['font.sans-serif'] = ['Arial Unicode MS', 'Noto Sans CJK']  
+plt.rcParams['axes.unicode_minus'] = False  # 正常显示负号
 
 # 定义文件路径
-file_path = '/Users/10240013/Documents/学校资料/洪水问题一/train_20000.csv'
+file_path = '../data/train_20000.csv'
 
 # 读取数据
 df = pd.read_csv(file_path)

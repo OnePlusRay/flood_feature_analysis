@@ -3,7 +3,7 @@ import random
 import chardet
 
 # 定义文件路径
-file_path = '/Users/10240013/Documents/学校资料/洪水问题一/train.csv'
+file_path = '../data/train.csv'
 
 # 读取原始数据，直接指定编码格式
 df = pd.read_csv(file_path, encoding='utf-8')
@@ -22,7 +22,7 @@ sample_indices = random.sample(range(len(df)), sample_size)  # 从索引范围�
 df_sample = df.iloc[sample_indices]  # 根据选择的索引筛选数据
 
 # 保存抽取的数据
-output_path = '/Users/10240013/Documents/学校资料/洪水问题一/train_20000.csv'
+output_path = '../data/train_20000.csv'
 df_sample.to_csv(output_path, index=False, encoding='utf-8')  # 保存为 utf-8 编码
 
 print(f"已成功从 {file_path} 中随机抽取 2 万条数据，并保存为 {output_path}")
